@@ -1,6 +1,8 @@
 # ETH-AI: Advanced Ethereum Trading Bot
 > ⚠️ Under rework: earlier AI/performance claims were unsubstantiated and have been removed. See docs/PRODUCTION_PLAN.md.
 
+Research only. This project is for backtesting and education and is not financial advice or a promise of profit.
+
 ## 🚀 Project Overview
 **ETH-AI** is a sophisticated quantitative trading bot designed to trade Ethereum (ETH) using deep learning and alternative data. Unlike simple moving-average bots, it uses a **Metamodel** approach—combining specific strengths of different AI architectures to predict market moves.
 
@@ -34,71 +36,75 @@ We feed the AI a 360-degree view of the market using **411 distinct features**:
 
 ### 3. On-Chain Data (Infura)
 - **Metric 1: Base Fee Trends**: High fees often signal network congestion (tops/capitulation).
-- **Metric 2: Gas Ratio**: Measures how full blocks are (demand proxy).
-- *Purpose*: Provides fundamental signals about actual network usage, which price action can miss.
+- **Metric 2: Gas Used Ratio**: Measures network utilization.
+- *Purpose*: Gives the bot "fundamental" insight into the Ethereum network health.
 
 ---
-
-## 🛡️ The Strategy: "Spot Alpha"
-We strictly adhere to a **Spot Long-Only** risk profile as per your requirements.
-
-- **Buy Signal**: When the AI predicts a positive return > 0.5%.
-    - *Action*: Buy ETH (100% Allocation).
-- **Sell Signal**: When the AI predicts a drop or flat market.
-    - *Action*: Sell to stablecoin (USDT) and wait.
-    - *Benefit*: Avoids holding through massive -80% bear markets.
-- **No Shorting**: We never bet against ETH with borrowed money.
-- **No Leverage**: We never borrow extra money to trade larger size.
-
----
-
-## 🛠️ How to Use
 
 ## 🛠️ How to Use
 
 ### 1. Setup
-Ensure dependencies are installed and `.env` is configured:
+You need Python 3.8+ and the required libraries.
+
 ```bash
 pip install -r requirements.txt
-# .env file:
-# BINANCE_API_KEY=...
-# INFURA_PROJECT_ID=...
 ```
 
-### 2. Live Dashboard (Monitoring) 📊
-Launch the Control Room to see the bot in action:
+### 2. Run the Dashboard
+The project includes a Streamlit dashboard to visualize performance.
+
 ```bash
-streamlit run src/dashboard/app.py
+streamlit run dashboard.py
 ```
 
-### 3. Training Mode (Historical) 🏫
-Use the unified CLI to fetch data, train the AI, and generate a report:
+### 3. Run Training
+To retrain the models from scratch:
+
 ```bash
-# Standard Run (2018-2025)
-python main.py --mode train --symbol ETH/USDT --timeframe 4h
-
-# Fast Test (Debug Mode - Last 3 Months)
-python main.py --mode train --symbol ETH/USDT --debug
+python main.py --mode train
 ```
 
-### 4. Live Production Mode 🔴
-Start the infinite trading loop (Fetch -> Predict -> Log -> Sleep):
+## 🛠️ How to Use
+
+### 1. Setup
+You need Python 3.8+ and the required libraries.
+
 ```bash
-python main.py --mode live --symbol ETH/USDT
+pip install -r requirements.txt
 ```
-*Note: This logs predictions to `data/predictions.db` which the Dashboard reads in real-time.*
 
-### 5. Multi-Coin Support 🌍
-Want to trade Solana?
+### 2. Run the Dashboard
+The project includes a Streamlit dashboard to visualize performance.
+
 ```bash
-python main.py --mode train --symbol SOL/USDT
+streamlit run dashboard.py
 ```
 
+### 3. Run Training
+To retrain the models from scratch:
 
+```bash
+python main.py --mode train
+```
 
 ---
 
-## 📈 Why This Helps You
-1.  **Automation**: Removes emotional decision-making (FOMO/Panic Selling).
-2.  **Alpha**: Uses data humans can't process (400+ indicators simultaneously).
-3.  **Capital Preservation**: The "Cash Mode" aims to protect gains during crypto winters.
+## 📦 Project Structure
+- **`src/`**: Source code for data fetching and model logic.
+- **`data/`**: Historical datasets (parquet files).
+- **`models/`**: Saved model weights.
+- **`notebooks/`**: Jupyter notebooks for research.
+
+---
+
+## ⚠️ Disclaimer
+This software is for educational purposes only. Cryptocurrency trading carries significant risk. The authors are not responsible for any financial losses.
+
+## 📉 Trading Philosophy
+- **No Shorting**: We only buy ETH (Long) or hold Cash. We never bet against the market.
+- **No Leverage**: We trade 1:1 with our capital.
+- **Capital Preservation**: If the model is unsure, it stays in Cash (USDC).
+
+## Limitations and risk controls
+
+Backtests can overfit, market regimes change, and live trading carries loss risk. The documented strategy avoids shorting and leverage.
