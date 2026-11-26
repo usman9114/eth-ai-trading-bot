@@ -1,0 +1,9 @@
+{
+  "prompt": "A smooth glowing teal trend line rising and falling like a price series across the scene, passing through a tall translucent vertical gate or threshold plane in the middle: the part of the line before the gate is dim grey-blue and dotted, the part after the gate is bright solid teal. Beside the gate a small glowing shield-like arc suggesting risk limits. Faint perspective grid floor. Wide technical illustration, aspect about 2:1, deep navy ink background (#0B1020), high contrast, soft glow, minimal modern clean style, not photoreal. The subject sits in the right two-thirds; the left third is calm, dark, empty space. No robots, no brains, no people, no circuit boards. Absolutely no text, letters, numbers, logos, watermarks, borders or UI.",
+  "driver_model": "gpt-6-luna",
+  "image_model": "gpt-image via codex $imagegen",
+  "created": "2026-11-26T21:07:22",
+  "refs": [],
+  "tool": "scout.chatgpt (codex exec, ChatGPT plan)",
+  "note": "AI-generated. Not a product photo."
+}
