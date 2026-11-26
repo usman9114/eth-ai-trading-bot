@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/assets/hero.png" alt="Banner: a trend line that is dim and dotted before a translucent gate and bright after it, beside a small shield arc, standing for trend signals that earn capital only after evidence and stay inside risk limits" width="100%"></p>
+<p align="center"><img src="docs/assets/hero.jpg" alt="Banner: a clay-and-felt miniature of a brick canal lock where a small sailboat waits for the wooden gate to open, standing for trend signals that only get capital once evidence opens the gate. Title: ETH-AI trading research." width="100%"></p>
 
 # ETH-AI: Advanced Ethereum Trading Bot
 > ⚠️ Under rework: earlier AI/performance claims were unsubstantiated and have been removed. See docs/PRODUCTION_PLAN.md.
@@ -128,4 +128,4 @@ Backtests can overfit, market regimes change, and live trading carries loss risk
 
 ## Visual assets
 
-The banner illustration was generated from a written brief (`docs/assets/briefs/`, with the references it drew on); its sidecar `docs/assets/hero-art.png.json` records the prompt. Text is set in real type by `docs/assets/tools/compose_banner.py`. `docs/assets/social-preview.png` (1280x640) is for the repository's social preview.
+The banner illustration was generated from a written brief (`docs/assets/briefs/`, with the references it drew on); its sidecar `docs/assets/hero-art.png.json` records the prompt. Text is set in real type by `docs/assets/tools/compose_banner.py`. `docs/assets/social-preview.jpg` (1280x640) is for the repository's social preview.

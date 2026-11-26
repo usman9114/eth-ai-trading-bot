@@ -1,8 +1,8 @@
 {
-  "prompt": "A smooth glowing teal trend line rising and falling like a price series across the scene, passing through a tall translucent vertical gate or threshold plane in the middle: the part of the line before the gate is dim grey-blue and dotted, the part after the gate is bright solid teal. Beside the gate a small glowing shield-like arc suggesting risk limits. Faint perspective grid floor. Wide technical illustration, aspect about 2:1, deep navy ink background (#0B1020), high contrast, soft glow, minimal modern clean style, not photoreal. The subject sits in the right two-thirds; the left third is calm, dark, empty space. No robots, no brains, no people, no circuit boards. Absolutely no text, letters, numbers, logos, watermarks, borders or UI.",
+  "prompt": "Miniature tilt-shift diorama, soft clay and felt toy-like 3D render, golden-hour light, shallow depth of field. An old brick canal lock with heavy wooden lock gates: the upstream water is high and calm, the downstream water is low. A small wooden sailboat waits inside the lock chamber while the gate begins to swing open. Beside the lock a plain wooden water-level gauge post with unmarked tick lines. Tiny trees and a towpath. Warm gold and sky-blue palette. Wide 2:1 composition. The left third of the canvas stays quiet and low-detail so a title can be placed there. No text, letters, numbers, logos, watermarks, borders, people or robots.",
   "driver_model": "gpt-6-luna",
   "image_model": "gpt-image via codex $imagegen",
-  "created": "2026-11-26T21:07:22",
+  "created": "2026-11-26T21:15:51",
   "refs": [],
   "tool": "scout.chatgpt (codex exec, ChatGPT plan)",
   "note": "AI-generated. Not a product photo."
